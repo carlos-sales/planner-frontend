@@ -1,0 +1,12 @@
+/* form global style */
+mat-form-field
+{
+  width: 100%;
+}
+mat-form-field {
+  transition: margin-bottom 0.3s ease;
+
+  &:has(mat-error) {
+    margin-bottom: 1rem;
+  }
+}

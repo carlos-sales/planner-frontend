@@ -1,0 +1,104 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'asimovian';
+  src: url('assets/fonts/Asimovian/Asimovian-Regular.ttf');
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ubuntu';
+  src: url('assets/fonts/Ubuntu/Ubuntu-Regular.ttf');
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ubuntu-bold';
+  src: url('assets/fonts/Ubuntu/Ubuntu-Bold.ttf');
+  font-style: normal;
+  font-display: swap;
+}
+
+html, body { height: 100%; background-color: #F5F5F5; }
+body { margin: 0; font-family: ubuntu !important; }
+
+.background
+{
+  background: linear-gradient(#00000080, #00000080), url('assets/images/background.jpg');
+  height: 100vh;
+}
+.logo-font
+{
+  font-family: asimovian !important;
+}
+.text-center{text-align: center;}
+.centralized-content
+{
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+.content-container
+{
+  padding: 2rem;
+  margin: 1rem;
+}
+/* grid definitions */
+.grid-container
+{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+}
+
+.grid-col-1  { grid-column: span 1; }
+.grid-col-2  { grid-column: span 2; }
+.grid-col-3  { grid-column: span 3; }
+.grid-col-4  { grid-column: span 4; }
+.grid-col-5  { grid-column: span 5; }
+.grid-col-6  { grid-column: span 6; }
+.grid-col-7  { grid-column: span 7; }
+.grid-col-8  { grid-column: span 8; }
+.grid-col-9  { grid-column: span 9; }
+.grid-col-10 { grid-column: span 10; }
+.grid-col-11 { grid-column: span 11; }
+.grid-col-12 { grid-column: span 12; }
+
+// Tablet
+@media (max-width: 1279px)
+{
+  .grid-container { grid-template-columns: repeat(8, 1fr); }
+
+  .grid-col-1,
+  .grid-col-2 { grid-column: span 2; }
+  .grid-col-3,
+  .grid-col-4,
+  .grid-col-5,
+  .grid-col-6 { grid-column: span 4; }
+  .grid-col-7,
+  .grid-col-8,
+  .grid-col-9,
+  .grid-col-10,
+  .grid-col-11,
+  .grid-col-12 { grid-column: span 8; }
+}
+
+// Mobile
+@media (max-width: 959px)
+{
+  .grid-container { grid-template-columns: repeat(4, 1fr); }
+
+  .grid-col-1,
+  .grid-col-2 { grid-column: span 2; }
+  .grid-col-3,
+  .grid-col-4,
+  .grid-col-5,
+  .grid-col-6,
+  .grid-col-7,
+  .grid-col-8,
+  .grid-col-9,
+  .grid-col-10,
+  .grid-col-11,
+  .grid-col-12 { grid-column: span 4; }
+}

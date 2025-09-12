@@ -1,0 +1,26 @@
+<div class="grid-container">
+  <div [class]="breakpointService.isDesktopDevice() ? 'grid-col-4' : 'grid-col-12'">
+    <div class="centralized-content">
+      <div class="text-center">
+        <h1 class="logo-font">Planner</h1>
+        <p>{{isRecovery ? 'Digite o e-mail para recuperar seu acesso' : 'Olá! Faça login para acessar'}}</p>
+        <div class="auth-container-form">
+          @if( isRecovery )
+          {
+            <recovery-password-form @slideFadeFromLeftAnimation></recovery-password-form>
+          }
+          @else
+          {
+            <auth-form @slideFadeFromRightAnimation [@.disabled]="isDisabledAnimation"></auth-form>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+  <ng-container *ngIf="breakpointService.isDesktopDevice()">
+    <div class="grid-col-8">
+      <div class="background"></div>
+    </div>
+  </ng-container>
+</div>
+
