@@ -7,7 +7,6 @@ import { shakeAnimation } from './../../../../shared/animations/shakeAnimation';
 
 @Component({
     selector: 'auth-form',
-    standalone: true,
     imports: [AppMaterialModule, ReactiveFormsModule],
     templateUrl: './auth-form.component.html',
     styleUrl: './auth-form.component.scss',

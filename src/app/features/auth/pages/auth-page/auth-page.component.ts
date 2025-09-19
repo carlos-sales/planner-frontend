@@ -12,7 +12,6 @@ import { Observable } from 'rxjs';
 
 @Component({
     selector: 'auth-page',
-    standalone: true,
     imports: [AppMaterialModule, CommonModule, AuthFormComponent, RecoveryPasswordFormComponent],
     templateUrl: './auth-page.component.html',
     styleUrl: './auth-page.component.scss',

@@ -6,12 +6,11 @@ import { AppMaterialModule } from '../../../../shared/app-material/app-material.
 import { AuthService } from '../../services/auth.service';
 
 @Component({
-  selector: 'recovery-password-form',
-  standalone: true,
-  imports: [AppMaterialModule, ReactiveFormsModule],
-  templateUrl: './recovery-password-form.component.html',
-  styleUrl: './recovery-password-form.component.scss',
-  animations: [shakeAnimation]
+    selector: 'recovery-password-form',
+    imports: [AppMaterialModule, ReactiveFormsModule],
+    templateUrl: './recovery-password-form.component.html',
+    styleUrl: './recovery-password-form.component.scss',
+    animations: [shakeAnimation]
 })
 export class RecoveryPasswordFormComponent
 {
