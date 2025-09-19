@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RecoveryPasswordFormComponent } from './recovery-password-form.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('RecoveryPasswordFormComponent', () => {
   let component: RecoveryPasswordFormComponent;
@@ -8,7 +9,7 @@ describe('RecoveryPasswordFormComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RecoveryPasswordFormComponent]
+      imports: [RecoveryPasswordFormComponent, BrowserAnimationsModule]
     })
     .compileComponents();
 
