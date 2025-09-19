@@ -1,9 +1,9 @@
-import { shakeAnimation } from './../../../../shared/animations/shakeAnimation';
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormGroup, NonNullableFormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 
 import { AppMaterialModule } from '../../../../shared/app-material/app-material.module';
 import { AuthService } from '../../services/auth.service';
+import { shakeAnimation } from './../../../../shared/animations/shakeAnimation';
 
 @Component({
     selector: 'auth-form',
@@ -38,15 +38,15 @@ export class AuthFormComponent
 
   doLogin()
   {
-    if( ! this.form.valid ) return;
+    if( ! this.form.valid ) return false;
 
     if( this.form.value.user != 'admin' && this.form.value.password != '123' )
     {
       this.doShake();
       this.form.controls['password'].setErrors({'invalid-password': true});
-      return;
+      return false;
     }
-    // this.serviceSession.setIsLogged(true);
+    return true;
   }
 
   doShake()

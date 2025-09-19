@@ -1,10 +1,9 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormGroup, NonNullableFormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 
 import { shakeAnimation } from '../../../../shared/animations/shakeAnimation';
 import { AppMaterialModule } from '../../../../shared/app-material/app-material.module';
 import { AuthService } from '../../services/auth.service';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'recovery-password-form',
