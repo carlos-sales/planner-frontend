@@ -22,13 +22,13 @@
         <mat-error>Senha incorreta. Por favor, tente novamente.</mat-error>
       }
     </mat-form-field>
+    <div class="container-buttons">
+      <p>
+        <button mat-flat-button (click)="doLogin()">Entrar</button>
+      </p>
+      <p>
+        <a mat-button (click)="authService.setIsRecovery(true)">Esqueci minha senha</a>
+      </p>
+    </div>
   </form>
-  <div class="container-buttons">
-    <p>
-      <button mat-flat-button (click)="doLogin()">Entrar</button>
-    </p>
-    <p>
-      <a mat-button (click)="authService.setIsRecovery(true)">Esqueci minha senha</a>
-    </p>
-  </div>
 </div>
